@@ -5,6 +5,7 @@ import axios from 'axios';
 import FormData from 'form-data';
 import { basename } from 'node:path';
 import { z } from 'zod';
+import './instrumentation.js';
 
 const openai_api_key = process.env.OPENAI_API_KEY ?? '';
 const openai_chat_model =  process.env.OPENAI_CHAT_MODEL_REASONING ?? '';

@@ -9,6 +9,7 @@ import SearchEsgTool from 'utils/tools/search_esg_tool';
 import SearchInternalTool from 'utils/tools/search_internal_tool';
 import SearchInternetTool from 'utils/tools/search_internet_tool';
 import { z } from 'zod';
+import './instrumentation.js';
 
 const email = process.env.EMAIL ?? '';
 const password = process.env.PASSWORD ?? '';

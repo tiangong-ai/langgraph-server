@@ -1,5 +1,6 @@
 import { suggestData } from '@tiangong-lca/tidas-sdk';
 import { StateGraph,Annotation } from '@langchain/langgraph';
+import './instrumentation.js';
 // import { z } from 'zod';
 // import { BaseMessage } from '@langchain/core/messages';
 

@@ -1,5 +1,6 @@
 import { TavilySearch } from '@langchain/tavily';
 import { ChatOpenAI } from '@langchain/openai';
+import './instrumentation.js';
 
 import { Annotation, MessagesAnnotation, StateGraph } from '@langchain/langgraph';
 import { ToolNode } from '@langchain/langgraph/prebuilt';

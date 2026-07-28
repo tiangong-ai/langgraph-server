@@ -4,6 +4,7 @@ import { ChatOpenAI } from '@langchain/openai';
 import axios from 'axios';
 import neo4j from 'neo4j-driver';
 import { z } from 'zod';
+import './instrumentation.js';
 
 // OpenAI
 const openai_api_key = process.env.OPENAI_API_KEY ?? '';

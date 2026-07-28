@@ -84,6 +84,26 @@ curl -H "X-API-Key: your-strong-api-key" http://localhost:8123/ok
 
 Open LangSmith and check traces under your `LANGSMITH_PROJECT`.
 
+## Self-hosted tracing with AgentPond
+
+As an alternative to LangSmith, the trusted Node.js runtime can export OpenInference traces directly to storage you own with [AgentPond](https://github.com/marcusschiesser/agentpond). The instrumentation is inactive unless a Files SDK environment is loaded.
+
+```bash
+npx agentpond init
+npx agentpond env init local \
+  --provider fs \
+  --root "$PWD/.agentpond/envs/local/objects"
+npx agentpond env use local
+
+eval "$(npx agentpond env get local)"
+npx @langchain/langgraph-cli@latest dev
+
+npx agentpond sync
+npx agentpond traces list --limit 10
+```
+
+The local `fs` provider is for development only. Production deployments should use a persistent provider from the [Files SDK provider catalog](https://files-sdk.dev/docs/providers) and load the same environment into both the server and AgentPond CLI. OpenInference records model and tool inputs and outputs, so review their sensitivity before enabling production tracing.
+
 ## Local development server
 
 ```bash

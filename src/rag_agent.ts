@@ -1,4 +1,5 @@
 import { ChatOpenAI } from '@langchain/openai';
+import './instrumentation.js';
 
 import { MessagesAnnotation, StateGraph } from '@langchain/langgraph';
 import { ToolNode } from '@langchain/langgraph/prebuilt';

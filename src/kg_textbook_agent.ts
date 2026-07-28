@@ -14,6 +14,7 @@ import { Annotation, Send, StateGraph } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
 import axios from 'axios';
 import { z } from 'zod';
+import './instrumentation.js';
 
 // OPENAI
 const openai_api_key = process.env.OPENAI_API_KEY ?? '';

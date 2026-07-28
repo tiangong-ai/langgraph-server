@@ -1,6 +1,7 @@
 import { Annotation, Send, StateGraph } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
 import { z } from 'zod';
+import './instrumentation.js';
 
 const openai_chat_model_mini = process.env.OPENAI_CHAT_MODEL_MINI ?? '';
 const openai_api_key = process.env.OPENAI_API_KEY ?? '';

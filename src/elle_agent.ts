@@ -1,5 +1,6 @@
 import { BaseMessage } from '@langchain/core/messages';
 import { ChatOpenAI } from '@langchain/openai';
+import './instrumentation.js';
 
 import { Annotation, Command, StateGraph } from '@langchain/langgraph';
 

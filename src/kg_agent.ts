@@ -2,6 +2,7 @@ import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { MessagesAnnotation, StateGraph } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
 import { z } from 'zod';
+import './instrumentation.js';
 
 const openai_api_key = process.env.OPENAI_API_KEY ?? '';
 const openai_chat_model = process.env.OPENAI_CHAT_MODEL ?? '';

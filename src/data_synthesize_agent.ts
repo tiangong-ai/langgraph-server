@@ -2,6 +2,7 @@ import { Annotation, Send, StateGraph } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
 import axios from 'axios';
 import { z } from 'zod';
+import './instrumentation.js';
 
 // OpenAI
 const openai_chat_model = process.env.OPENAI_CHAT_MODEL ?? '';
