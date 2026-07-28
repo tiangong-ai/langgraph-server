@@ -133,6 +133,8 @@ rules:
     triggers:
       - path: AGENTS.md
         kind: doc-contract
+      - path: README.md
+        kind: repo-docs
       - path: .docpact/config.yaml
         kind: doc-ai-layer
       - path: docs/agents/repo-validation.md
